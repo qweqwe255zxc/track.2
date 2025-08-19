@@ -76,14 +76,14 @@ a:hover::before {
 }
 
 .cursor {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 15px;
+    width: 15px;
     position: fixed;
     border: 2px solid hsl(0, 0%, 15%);
     border-radius: 50%;
     transition: background .2s ease, transform .15s ease;
     pointer-events: none;
-    z-index: 6;
+    z-index: 1000;
 }
 
 .cursor.hover {
@@ -247,12 +247,12 @@ a:hover::before {
 .track-img {
     height: 78%;
     transition: all 0.2s ease;
-    filter: drop-shadow(-558px 311px 179px rgba(0, 0, 0, 0.02)) drop-shadow(-357px 199px 164px rgba(0, 0, 0, 0.05)) drop-shadow(-201px 112px 138px rgba(0, 0, 0, 0.11)) drop-shadow(-89px 50px 102px rgba(0, 0, 0, 0.17)) drop-shadow(-22px -22px 56px rgba(0, 0, 0, 0.19));
+    /* filter: drop-shadow(-558px 311px 179px rgba(0, 0, 0, 0.02)) drop-shadow(-357px 199px 164px rgba(0, 0, 0, 0.05)) drop-shadow(-201px 112px 138px rgba(0, 0, 0, 0.11)) drop-shadow(-89px 50px 102px rgba(0, 0, 0, 0.17)) drop-shadow(-22px -22px 56px rgba(0, 0, 0, 0.19)); */
 }
 
-/* .track-img.dynamic-shadow {
+.track-img.dynamic-shadow {
     filter: drop-shadow(var(--shadow-x, -551px) var(--shadow-y, 311px) 100px rgba(0, 0, 0, 0.0)) drop-shadow(calc(var(--shadow-x, -357px) * 0.64) calc(var(--shadow-y, 199px) * 0.64) 95px rgba(0, 0, 0, 0.03)) drop-shadow(calc(var(--shadow-x, -201px) * 0.47) calc(var(--shadow-y, 112px) * 0.47) 90px rgba(0, 0, 0, 0.11)) drop-shadow(calc(var(--shadow-x, -89px) * 0.35) calc(var(--shadow-y, 50px) * 0.35) 80px rgba(0, 0, 0, 0.20)) drop-shadow(calc(var(--shadow-x, -22px) * 0.2) calc(var(--shadow-y, -22px) * 0.2) 56px rgba(0, 0, 0, 0.25));
-} */
+}
 
 .track-text-container {
     display: flex;

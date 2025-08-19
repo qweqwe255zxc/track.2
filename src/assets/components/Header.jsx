@@ -14,8 +14,8 @@ const Header = () => {
     }
     return (
         <header ref={container} className="header-content">
-            <a href="">Balenciaga</a>
-            <a href="">Track.2</a>
+            <a href="#">Balenciaga</a>
+            <a href="#">Track.2</a>
         </header>
         
     );

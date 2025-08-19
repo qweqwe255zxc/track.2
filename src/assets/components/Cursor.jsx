@@ -13,8 +13,8 @@ const Cursor = () => {
         };
 
         const animate = () => {
-            currentX += (mouseX - currentX) * 0.4; // плавность движения
-            currentY += (mouseY - currentY) * 0.4;
+            currentX += (mouseX - currentX) * 0.6; 
+            currentY += (mouseY - currentY) * 0.6;
             if (cursor.current) {
                 const isHover = cursor.current.classList.contains('hover');
                 cursor.current.style.transform = `translate(${currentX - cursor.current.offsetWidth / 2}px, ${currentY - cursor.current.offsetHeight / 2}px)${isHover ? ' scale(1.2)' : ''}`;

@@ -1,4 +1,4 @@
-import {  useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import track2 from '../img/track.2-sideview.png'
 
 const Track2 = () => {
@@ -9,20 +9,20 @@ const Track2 = () => {
     const imgContainer = useRef(null);
 
 
-    // useEffect(() => {
-    //     const handleMouseMove = (e) => {
-    //         if (!imgRef.current) return;
-    //         const rect = imgRef.current.getBoundingClientRect();
-    //         const centerX = rect.left + rect.width / 2;
-    //         const centerY = rect.top + rect.height / 2;
-    //         const offsetX = (centerX - e.clientX) / 5;
-    //         const offsetY = (centerY - e.clientY) / 5;
-    //         imgRef.current.style.setProperty('--shadow-x', `${offsetX}px`);
-    //         imgRef.current.style.setProperty('--shadow-y', `${offsetY}px`);
-    //     };
-    //     window.addEventListener('mousemove', handleMouseMove);
-    //     return () => window.removeEventListener('mousemove', handleMouseMove);
-    // }, []);
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            if (!imgRef.current) return;
+            const rect = imgRef.current.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const offsetX = (centerX - e.clientX) / 5;
+            const offsetY = (centerY - e.clientY) / 5;
+            imgRef.current.style.setProperty('--shadow-x', `${offsetX}px`);
+            imgRef.current.style.setProperty('--shadow-y', `${offsetY}px`);
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
